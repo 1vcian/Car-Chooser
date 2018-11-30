@@ -1,0 +1,85 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  
+}.bg
+{
+  position: relative;
+  background-attachment: fixed;
+  background: #8dcfcb url(bb.png);
+  height: 100%;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animate 10s linear infinite;
+  bottom:0%;
+}.car
+{
+  background-attachment: fixed;
+  position: absolute;
+  bottom:0;
+  right: 70%;
+  width:200px;
+  height: auto;
+}.aereo{
+  background-attachment: fixed;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: 85%;
+  right: 0%;
+  animation: vola 3s linear infinite;
+}
+@keyframes vola 
+{
+  from{
+    right: 0%;
+  }
+  to{
+    right: 100%;
+  }
+}
+@keyframes animate
+{
+  from{
+    background-position: 0 0;
+  }
+  to {
+    background-position: 49% 0;
+  }
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: 0px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 0px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
