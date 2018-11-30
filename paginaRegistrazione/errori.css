@@ -34,7 +34,7 @@ body {
   position: absolute;
   bottom: 80%;
   right: 0%;
-  animation: vola 4s linear infinite;
+  animation: vola 3.95s linear infinite;
 }.cc{
 background-attachment: fixed;
 position:absolute;
@@ -55,10 +55,10 @@ animation: volad 4s linear infinite;
 @keyframes volad 
 {
   from{
-    right: -964px;
+    right: -1190px;
   }
   to{
-    right: 100%;
+    right:100%;
   }
 }
 @keyframes animate

@@ -6,6 +6,7 @@ body {
 body {
   margin:0;
   padding:0;
+  overflow-x: hidden;
   
 }.bg
 {
@@ -31,14 +32,30 @@ body {
   width: 150px;
   height: auto;
   position: absolute;
-  bottom: 85%;
+  bottom: 80%;
   right: 0%;
-  animation: vola 3s linear infinite;
+  animation: vola 4s linear infinite;
+}.cc{
+background-attachment: fixed;
+position:absolute;
+bottom: 80%;
+right:0%;
+animation: volad 4s linear infinite; 
+
 }
 @keyframes vola 
 {
   from{
-    right: 0%;
+    right: -150px;
+  }
+  to{
+    right: 160%;
+  }
+}
+@keyframes volad 
+{
+  from{
+    right: -964px;
   }
   to{
     right: 100%;
