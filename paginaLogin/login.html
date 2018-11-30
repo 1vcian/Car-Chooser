@@ -4,16 +4,14 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link href="../css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="signinn.css" rel="stylesheet"/>
+        <link href="login.css" rel="stylesheet"/>
         <script type="text/javascript" lang="javascript" src="../js/bootstrap.min.js">
 		</script>
-        <script type="text/javascript" lang="javascript" src="loginScript.js"></script>
     </head>
     <body class="text-center">
         <div class="bg"> 
             
-        <form action="../paginaSito/pagina.html" class="form-signin" 
-        method="POST" name="myForm" onSubmit="return validaForm()">
+        <form action="" class="form-signin"  method="POST" name="myForm">
         <br>
         <br>
         <br>
@@ -25,7 +23,7 @@
             <input type="email" name="inputEmail" class="form-control" 
             placeholder="Email address" required autofocus/>
             <input type="password" name="inputPassword" class="form-control" 
-            placeholder="Password" required/>
+            placeholder="Password" required autofocus/>
             
             
             <div id="divRemember" class="checkbox mb-3">
@@ -33,13 +31,13 @@
                 <label for="remember" style="color:brown">Remember me</label>
 
             </div>
-            <button class="btn btn-lg btn-danger btn-block" type="submit">Sign in</button> 
+            <button class="btn btn-lg btn-danger btn-block" type="submit" name = "loginBotton">Sign in</button> 
             <br>
-            <a href="registrati.html" style="color:brown">Sign up</a>
+            <a href="../paginaRegistrazione/registrati.html" style="color:brown">Sign up</a>
 
         </form>
-        <img src="aereo.png" class="aereo">
-        <img src="car.gif" class="car">
+        <img src="immagini/aereo.png" class="aereo">
+        <img src="immagini/car.gif" class="car">
     </div>
     </body>
 </html>
