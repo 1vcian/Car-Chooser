@@ -12,21 +12,20 @@ body {
 {
   position: relative;
   background-attachment: fixed;
-  background: #8dcfcb url("immagini/bb.png");
+  background: #8dcfcb url("../immagini/bb.png");
   height: 100%;
   background-size: cover;
   background-position: 0 0;
-  background-repeat: repeat-x;
-  animation: animate 10s linear infinite;
   bottom:0%;
 }.car
 {
   background-attachment: fixed;
   position: absolute;
-  bottom:0;
+  bottom:-63;
   right: 70%;
-  width:200px;
+  width:350px;
   height: auto;
+
 }.aereo{
   background-attachment: fixed;
   width: 150px;

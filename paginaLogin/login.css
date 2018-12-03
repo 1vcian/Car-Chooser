@@ -12,7 +12,7 @@ body {
 {
   position: relative;
   background-attachment: fixed;
-  background: #8dcfcb url("immagini/bb.png");
+  background: #8dcfcb url("../immagini/bb.png");
   height: 100%;
   background-size: cover;
   background-position: 0 0;
