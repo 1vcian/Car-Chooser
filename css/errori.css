@@ -7,29 +7,34 @@ body {
   margin:0;
   padding:0;
   overflow-x: hidden;
+  overflow-y: hidden;
   
 }.bg
 {
-  position: relative;
+  position: absolute;
   background-attachment: fixed;
-  background: #8dcfcb url("immagini/bb.png");
-  height: 105%;
+  background: #8dcfcb url("../immagini/bb.png");
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-position: 0 0;
-  background-repeat: repeat-x;
-  animation: animate 10s linear infinite;
   bottom:0%;
 }.car
 {
   background-attachment: fixed;
   position: absolute;
-  bottom:0;
+  bottom:-10%;
   right: 70%;
-  width:200px;
+  width:350px;
+  max-width: 27%;
+  min-width: 27%;
   height: auto;
+
 }.aereo{
   background-attachment: fixed;
   width: 150px;
+  max-width: 13%;
+  min-width: 13%;
   height: auto;
   position: absolute;
   bottom: 80%;
@@ -39,8 +44,10 @@ body {
 background-attachment: fixed;
 position:absolute;
 bottom: 80%;
+max-width: 70%;
+min-width: 70%;
 right:0%;
-animation: volad 4s linear infinite; 
+animation: volad 4s linear infinite;  
 
 }
 @keyframes vola 
@@ -55,10 +62,10 @@ animation: volad 4s linear infinite;
 @keyframes volad 
 {
   from{
-    right: -964px;
+    right: -1190px;
   }
   to{
-    right: 100%;
+    right:100%;
   }
 }
 @keyframes animate

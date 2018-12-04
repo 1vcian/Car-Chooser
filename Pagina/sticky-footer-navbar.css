@@ -10,10 +10,11 @@ body {
 }.bg{
 
 
-  position: relative;
+  position: absolute;
   background-attachment: fixed;
   background: #8dcfcb url("../immagini/bb.png");
   height: 100%;
+  width: 100%;
   background-size: cover;
   background-position: 0 0;
   background-repeat: repeat-x;
