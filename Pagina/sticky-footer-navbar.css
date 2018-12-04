@@ -7,6 +7,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 0;
+  overflow-y: hidden;
 }.bg{
 
 
@@ -20,6 +21,24 @@ body {
   background-repeat: repeat-x;
   animation: animate 10s linear infinite;
   bottom:0%;
+}.form-signin{
+  width:25%;
+  left:2%;
+  top: 12%;
+  position:absolute;
+}.car{
+
+
+
+
+  position: fixed;
+  bottom:0;
+  right: 70%;
+  
+  width:200px;
+  height: auto;
+  max-width: 17%;
+  min-width: 17%;
 }
 
 
