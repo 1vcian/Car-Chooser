@@ -4,7 +4,7 @@
 
         <?php
 
-            $dbconn = pg_connect("host=localhost port=5433 dbname=Progetto user=postgres password=lenzerini") or die('Could not connect: ' . pg_last_error());
+            $dbconn = pg_connect("host=localhost port=5432 dbname=Progetto user=postgres password=lenzerini") or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['registrationButton']))){
                 header("Location: ../index.html");
             }
