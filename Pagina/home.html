@@ -50,7 +50,7 @@
     <main role="main" class="container">
         <br><br><br><br><br>
     
-        <form action="" class="form-signin-sm"  method="POST" name="chooser">
+        <form action="" class="form-signin"  method="POST" name="chooser">
             <select class="custom-select custom-select-lg mb-3">
                 <option selected>Type</option>
                 <option value="city_car">City car</option>
@@ -79,9 +79,12 @@
                  <option value="van">Electric</option>
                </select>
                
-               <label for="customRange1">Example range</label>
-               <input type="range" class="custom-range" id="customRange1">
-            </form>
+               <input type="range" class="custom-range" name="weight" id="range_weight" value="5" min="10000" max="200000" step="5000" oninput="range_weight_disp.value = range_weight.value">
+               <output  id="range_weight_disp"></output>
+
+               <button class="btn btn-lg btn-danger btn-block" type="submit" name = "chooseButton">Invio</button> 
+
+
     
       
       <br><br><br><br><br>
