@@ -51,7 +51,7 @@
         
         <form action="" class="form-signin"  method="POST" name="chooser" >
             <select class="custom-select custom-select-lg mb-3" length="1" id="tipo">
-                <option selected>Type</option>
+                <option hidden>Type</option>
                 <option value="city_car">City car</option>
                 <option value="sedan">Sedan</option>
                 <option value="cabrio">Cabrio</option>
@@ -61,7 +61,7 @@
                 <option value="suv">Suv</option>
               </select>
             <select class="custom-select custom-select-lg mb-3" id="posti">
-                <option selected>Seat</option>
+                <option hidden>Seat</option>
                 <option value="2">2</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
@@ -69,7 +69,7 @@
                 <option value="8">8</option>
                </select>
             <select class="custom-select custom-select-lg mb-3" id="carburante">
-                 <option selected>Fuel</option>
+                 <option hidden>Fuel</option>
                  <option value="city_car">Petrol</option>
                  <option value="sedan">Diesel</option>
                  <option value="cabrio">Petrol/gpl</option>
@@ -77,9 +77,10 @@
                  <option value="station_wagon">Hybrid</option>
                  <option value="van">Electric</option>
                </select>
+               <span class="badge badge-warning" id="op" onmousemove="mostr()" >Budget: 10000€</span> 
                
-               <input type="range" class="custom-range" onmousemove="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="5000" oninput="range_weight_disp.value = range_weight.value">
-              </input><a id="op">10000</a>
+               <input type="range" class="custom-range" onmousemove="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="5000" >
+              </input>
 
                <button class="btn btn-lg btn-danger btn-block" type="submit" name = "chooseButton" onclick="ret();">Invio</button> 
                </form>

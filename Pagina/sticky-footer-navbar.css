@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: 0 0;
   background-repeat: repeat-x;
-  animation: animate 10s linear infinite;
+  animation: animate 8s linear infinite;
   bottom:0%;
 }.form-signin{
   width:25%;
@@ -39,6 +39,10 @@ body {
   height: auto;
   max-width: 17%;
   min-width: 17%;
+  
+}.badge-warning{
+  width:100%;
+  font-size: 24px;
 }
 
 

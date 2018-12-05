@@ -8,7 +8,9 @@ function ret(){
 	else if (posti=='Seat') window.alert('Non sono stati inseriti il numero di posti!');
 	else if (carburante=='Fuel') window.alert('Non è stato inserito il tipo di carburante!');
 	else{
-			window.alert('Bella pe te');
+		
+		
+			window.alert(toint(prezzo));
 
 	}
 
@@ -16,9 +18,13 @@ function ret(){
 
 } function mostr(){
 if (document.getElementById('range_weight').value=='200000'){
-	document.getElementById('op').innerHTML='illimitato';
+	document.getElementById('op').innerHTML='Budget: 200000\u20AC+';
 }
 else{
-	document.getElementById('op').innerHTML=document.getElementById('range_weight').value;
+	document.getElementById('op').innerHTML='Budget: '+document.getElementById('range_weight').value+'\u20AC';
 	}
+}
+function toint(a){
+
+return parseInt(a.replace('.',''));
 }
