@@ -50,7 +50,7 @@
     <main role="main" class="container" name="mai">
         
         <form action="" class="form-signin"  method="POST" name="chooser" >
-            <select class="custom-select custom-select-lg mb-3" length="1" id="tipo">
+            <select class="custom-select custom-select-lg mb-3" length="1" id="tipo" name="type" >
                 <option hidden>Type</option>
                 <option value="city_car">City car</option>
                 <option value="sedan">Sedan</option>
@@ -60,7 +60,7 @@
                 <option value="van">Van</option>
                 <option value="suv">Suv</option>
               </select>
-            <select class="custom-select custom-select-lg mb-3" id="posti">
+            <select class="custom-select custom-select-lg mb-3" id="posti" name="seat">
                 <option hidden>Seat</option>
                 <option value="2">2</option>
                 <option value="4">4</option>
@@ -68,7 +68,7 @@
                 <option value="7">7</option>
                 <option value="8">8</option>
                </select>
-            <select class="custom-select custom-select-lg mb-3" id="carburante">
+            <select class="custom-select custom-select-lg mb-3" id="carburante" name="fuel">
                  <option hidden>Fuel</option>
                  <option value="city_car">Petrol</option>
                  <option value="sedan">Diesel</option>
@@ -80,8 +80,7 @@
                <span class="badge badge-warning" id="op" onmousemove="mostr()" >Budget: 10000€</span> 
                
                <input type="range" class="custom-range" onmousemove="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="5000" >
-              </input>
-
+              </input><br><br>
                <button class="btn btn-lg btn-danger btn-block" type="submit" name = "chooseButton" onclick="ret();">Invio</button> 
                </form>
                            
