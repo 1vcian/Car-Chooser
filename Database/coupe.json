@@ -1,0 +1,200 @@
+[
+  {
+    "brands": "alfa romeo",
+    "name": "4c Coupe",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "65.500",
+    "foto": "4c coupe"
+  },
+  {
+    "brands": "audi",
+    "name": "A5 Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "42.000",
+    "foto": "a5 coupe"
+  },
+  {
+    "brands": "audi",
+    "name": "R8 Coupe",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "147.400",
+    "foto": "r8 coupe"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 2 Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "30.950",
+    "foto": "serie 2 coupe"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 4 Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "42.650",
+    "foto": "serie 4 coupe"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 6 Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "83.650",
+    "foto": "serie 6 coupe"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 8",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "104.700",
+    "foto": "serie 8"
+  },
+  {
+    "brands": "ferrari",
+    "name": "812 Superfast",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "300.300",
+    "foto": "812 superfast"
+  },
+  {
+    "brands": "ferrari",
+    "name": "488 Spider",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "254.680",
+    "foto": "488 spider"
+  },
+  {
+    "brands": "ford",
+    "name": "Mustang",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "41.000",
+    "foto": "mustang coupe"
+  },
+  {
+    "brands": "lamborghini",
+    "name": "Aventador",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "345.497",
+    "foto": "aventador"
+  },
+  {
+    "brands": "lamborghini",
+    "name": "Huracan",
+    "type": "coupe",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "185.000",
+    "foto": "huracan"
+  },
+  {
+    "brands": "maserati",
+    "name": "Gran Turismo",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "130.000",
+    "foto": "gran turismo"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe C Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "43.650",
+    "foto": "classe c coupe"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe E Coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "54.800",
+    "foto": "classe e coupe"
+  },
+  {
+    "brands": "mercedes",
+    "name": "CLS Coupe",
+    "type": "coupe",
+    "seat": "5",
+    "fuel_type1": "diesel",
+    "fuel_type2": "hybrid",
+    "fuel_type3": "",
+    "budget": "77.900",
+    "foto": "cls coupe"
+  },
+  {
+    "brands": "nissan",
+    "name": "GT-R",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "101.90",
+    "foto": "gt-r"
+  },
+  {
+    "brands": "porsche",
+    "name": "911 coupe",
+    "type": "coupe",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "102.800",
+    "foto": "911 coupe"
+  }
+]

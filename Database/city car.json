@@ -1,0 +1,156 @@
+[
+  {
+    "brands": "citroen",
+    "name": "C1",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "10.000",
+    "foto": "c1"
+  },
+  {
+    "brands": "fiat",
+    "name": "500",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "diesel",
+    "budget": "14.350",
+    "foto": "500"
+  },
+  {
+    "brands": "fiat",
+    "name": "Panda",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/methane",
+    "fuel_type3": "petrol/gpl",
+    "budget": "11.390",
+    "foto": "panda"
+  },
+  {
+    "brands": "kia",
+    "name": "Picanto",
+    "type": "city car",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "",
+    "budget": "11.000",
+    "foto": "picanto"
+  },
+  {
+    "brands": "lancia",
+    "name": "ypsilon",
+    "type": "city car",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "petrol/methane",
+    "budget": "16.600",
+    "foto": "ypsilon"
+  },
+  {
+    "brands": "opel",
+    "name": "Adam",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "",
+    "budget": "11.900",
+    "foto": "adam"
+  },
+  {
+    "brands": "opel",
+    "name": "Karl",
+    "type": "city car",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "",
+    "budget": "12.200",
+    "foto": "karl"
+  },
+  {
+    "brands": "peugeot",
+    "name": "108",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "11.700",
+    "foto": "108"
+  },
+  {
+    "brands": "peugeot",
+    "name": "iOn",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "electric",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "28.150",
+    "foto": "ion"
+  },
+  {
+    "brands": "renault",
+    "name": "Twingo",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/gpl",
+    "fuel_type3": "",
+    "budget": "10.600",
+    "foto": "twingo"
+  },
+  {
+    "brands": "smart",
+    "name": "fortwo",
+    "type": "city car",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "hybrid",
+    "fuel_type3": "",
+    "budget": "13.400",
+    "foto": "fortwo"
+  },
+  {
+    "brands": "toyota",
+    "name": "Aygo",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "11.600",
+    "foto": "aygo"
+  },
+  {
+    "brands": "volkswagen",
+    "name": "e-up!",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "electric",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "27.000",
+    "foto": "e-up!"
+  },
+  {
+    "brands": "volkswagen",
+    "name": "up!",
+    "type": "city car",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "petrol/methane",
+    "fuel_type3": "",
+    "budget": "11.000",
+    "foto": "up!"
+  }
+]

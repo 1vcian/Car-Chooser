@@ -1,0 +1,189 @@
+[
+  {
+    "brands": "alfa romeo",
+    "name": "4c Spider",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "75.500",
+    "foto": "4c spider"
+  },
+  {
+    "brands": "audi",
+    "name": "R8 Spider",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "160.700",
+    "foto": "r8 spider"
+  },
+  {
+    "brands": "audi",
+    "name": "TT Spider",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "40.300",
+    "foto": "tt spider"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 2 Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "37.100",
+    "foto": "serie 2 cabrio"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 4 Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "52.600",
+    "foto": "serie 4 cabrio"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 6 Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "96.250",
+    "foto": "serie 6 cabrio"
+  },
+  {
+    "brands": "ferrari",
+    "name": "Portofino",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "196.061",
+    "foto": "portofino"
+  },
+  {
+    "brands": "fiat",
+    "name": "124 Spider",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "28.000",
+    "foto": "124 spider"
+  },
+  {
+    "brands": "ford",
+    "name": "Mustang Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "45.500",
+    "foto": "mustang cabrio"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe C Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "52.894",
+    "foto": "classe c cabrio"
+  },
+  {
+    "brands": "mercedes",
+    "name": "SLC",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "37.570",
+    "foto": "slc"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe E Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "61.315",
+    "foto": "classe e cabrio"
+  },
+  {
+    "brands": "mercedes",
+    "name": "GT Spider",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "142.270",
+    "foto": "gt spider"
+  },
+  {
+    "brands": "nissan",
+    "name": "370Z",
+    "type": "cabrio",
+    "seat": "2",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "42.510",
+    "foto": "370z"
+  },
+  {
+    "brands": "opel",
+    "name": "Cascada",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "31.700",
+    "foto": "cascada"
+  },
+  {
+    "brands": "toyota",
+    "name": "GT86",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "31.800",
+    "foto": "gt86"
+  },
+  {
+    "brands": "volkswagen",
+    "name": "Maggiolino Cabrio",
+    "type": "cabrio",
+    "seat": "4",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "26.000",
+    "foto": "maggiolino cabrio"
+  }
+]

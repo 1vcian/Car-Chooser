@@ -1,0 +1,123 @@
+[
+  {
+    "brands": "bmw",
+    "name": "Serie 3 Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "36.700",
+    "foto": "serie 3 station"
+  },
+  {
+    "brands": "bmw",
+    "name": "Serie 5 Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "55.750",
+    "foto": "serie 5 station"
+  },
+  {
+    "brands": "lamborghini",
+    "name": "Urus",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "207.000",
+    "foto": "urus"
+  },
+  {
+    "brands": "mercedes",
+    "name": "CLA Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "32.700",
+    "foto": "cla station"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe C Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "36.600",
+    "foto": "classe c station"
+  },
+  {
+    "brands": "mercedes",
+    "name": "Classe E Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "50.000",
+    "foto": "classe e station"
+  },
+  {
+    "brands": "peugeot",
+    "name": "308 Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "",
+    "budget": "22.100",
+    "foto": "308 station"
+  },
+  {
+    "brands": "peugeot",
+    "name": "508 Station",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "diesel",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "32.900",
+    "foto": "508 station"
+  },
+  {
+    "brands": "volkswagen",
+    "name": "Passat",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "diesel",
+    "fuel_type2": "",
+    "fuel_type3": "",
+    "budget": "33.100",
+    "foto": "passat"
+  },
+  {
+    "brands": "volvo",
+    "name": "V60",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "38.410",
+    "foto": "v60"
+  },
+  {
+    "brands": "volvo",
+    "name": "V90",
+    "type": "station wagon",
+    "seat": "5",
+    "fuel_type1": "petrol",
+    "fuel_type2": "diesel",
+    "fuel_type3": "hybrid",
+    "budget": "46.340",
+    "foto": "v90"
+  }
+]
