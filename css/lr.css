@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-position: 0 0;
   background-repeat: repeat-x;
-  animation: animate 10s linear infinite;
+  animation: animate 8s linear infinite;
   bottom:0%;
 }.car
 {
