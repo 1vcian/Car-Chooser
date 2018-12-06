@@ -2,7 +2,6 @@
     <head></head>
     <body>
         <?php
-
             $dbconn = pg_connect("host=localhost port=5432 dbname=Progetto user=postgres password=lenzerini") or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['loginButton']))){
                 header("Location: ../index.html");
@@ -16,10 +15,10 @@
                     $nome=$line['name'];
                     header("Location: ../Pagina/home.html");
                 }
-                else{
-                    header("Location: TryAgain.html");
-                } 
-            }
+            else{
+                header("Location: TryAgain.html");
+            } 
+        }
         ?>
     </body>
 </html>
