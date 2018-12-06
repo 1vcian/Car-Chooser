@@ -14,7 +14,7 @@
                 $result=pg_query_params($dbconn,$q1,array($email,md5($password)));
                 if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
                     $nome=$line['name'];
-                    header("Location: ../Pagina/pagina.html");
+                    header("Location: ../Pagina/home.html");
                 }
                 else{
                     header("Location: TryAgain.html");

@@ -59,12 +59,12 @@ function ret(){
 
 
 		}
-	var out;var speed;
+	var out;
 	if (scelta!=''){
 		nome=tipoMacchine[scelta].name.toLowerCase();
 		out='La macchina che più si avvicina alle tue esigenze è la '+tipoMacchine[scelta].name+' che costa '+tipoMacchine[scelta].budget;
 		document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
-		speed=6-(tofl(tipoMacchine[scelta].budget))/100000;
+		var speed=6-(tofl(tipoMacchine[scelta].budget))/100000;
 		document.getElementById('sfo').style.animation='animate '+speed+'s linear infinite';
 	}	
 	else{
@@ -73,7 +73,7 @@ function ret(){
 		document.getElementById('sfo').style.animation='animate 0.8s linear infinite';
 	}
 
-	window.alert(speed);
+	window.alert(out);
 	scelta='';
 	costosa=0;
 	diff=9999999999;
