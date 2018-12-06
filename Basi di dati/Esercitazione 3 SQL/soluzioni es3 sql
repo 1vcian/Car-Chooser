@@ -1,0 +1,62 @@
+1)
+select nome, categoria
+from programmatore,programma,autore
+where programmatore.codice = autore.codice and autore.id = programma.id and programma.linguaggio != 'Python'
+order by nome
+
+select nome, categoria
+from programmatore
+where programmatore.codice in (select autore.codice
+				from autore
+				where id in   (select programma.id
+						from programma
+						where programma.linguaggio != 'Python'))
+order by nome
+
+
+2)
+select programmatore.codice,programmatore.nome 
+from programmatore 
+where programmatore.codice in (select autore.codice
+				from autore
+				where autore.codice not in (select pr.codice
+							  from programmatore as pr 
+							  where pr.codice in (select autore.codice	 										  from autore
+									   where autore.id in (select programma.id 													  from programma
+												  where programma.linguaggio != 'Java'))))
+
+3)
+
+select p1.id
+from programma p1
+where p1.anno != all (select p2.anno
+			 from programma p2
+			 where p1.id != p2.id)
+		or 
+	p1.linguaggio != all (select p3.linguaggio
+				from programma as p3
+				where p1.id != p3.id)
+
+4)
+select programmatore.codice,programma.anno,count(linguaggio)
+from programmatore,programma,autore
+where programmatore.codice = autore.codice and programma.id = autore.id
+group by programmatore.codice,programma.anno
+
+5)
+select programmatore.codice, programma.anno
+from programmatore,programma,autore
+where programmatore.categoria = 10 and programmatore.codice = autore.codice and programma.id = autore.id and programma.linguaggio != 'Java' 
+
+
+6)
+select programma.linguaggio,count(distinct autore.codice)
+from programma,autore
+where autore.id = programma.id
+group by programma.linguaggio
+
+
+
+
+
+

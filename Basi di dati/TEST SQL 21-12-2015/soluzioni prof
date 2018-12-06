@@ -1,0 +1,128 @@
+
+
+-- Query 1. 
+—- calcolare l'insieme (non il multi-insieme) delle coppie (A,B) tali 
+-- che A è una persona e B è un continente che A ha visitato
+—— JOIN
+
+select distinct persona, continente
+from Viaggio, Nazione
+where nome = nazione
+
+
+
+—— Query 2.
+-- per ogni persona nata prima del 1980, calcolare tutti i continenti visitati da tale persona,
+—— ordinando il risultato per codice fiscale e, a parità di codice fiscale, per il nome del 
+—— continente
+—— JOIN DOPPIO
+
+select CF, continente
+from Persona, Viaggio, Nazione
+where annoNascita < 1980  and CF = persona and nome = nazione
+order by persona, continente
+
+
+
+—— Query 3
+—— Calcolare l’insieme (non il multi-insieme) di coppie di persone diverse che hanno visitato 
+—— almeno una nazione nello stesso anno
+—— SELF JOIN
+
+select V1.persona, V2.persona
+from Viaggio V1 join Viaggio V2 on V1.nazione = V2.nazione and V1.anno = V2.anno
+where V1.persona < V2.persona
+
+
+
+—— Query 4 
+-- Per ogni viaggio, calcolare l'et\`a che la persona che ha effettuato il viaggio aveva al momento
+—— del viaggio stesso, restituendo anche il codice fiscale della persona che ha effettuato il 
+—— viaggio ed il nome della nazione visitata
+—— JOIN CON CALCOLO
+
+select CF, nazione, anno - annoNascita as età
+from Persona, Viaggio
+where CF = persona 
+
+
+
+—— Query 5
+-- Per ogni persona p e per ogni continente c visitato dalla persona p che sia diverso da 
+—— quello in cui p è nato, calcolare l'età di p quando ha fatto il primo viaggio nel continente c
+—- JOIN CON CALCOLO PIU COMPLICATO
+
+select P.CF, continente, min(anno) - annoNascita as età
+from Persona P join Viaggio on CF = persona join Nazione on nome = nazione 
+where continente not in (select continente 
+			  from Nazione 
+		          where nome = P.nazioneNascita)
+group by P.CF, continente 
+
+
+
+—— Query 6 
+—- Per ogni persona e per ogni continente calcolare il numero di
+—- viaggi effettuati da quella persona prima del 2000 in quel continente
+—- GROUP BY
+
+select persona, continente, count(distinct nazione)
+from Viaggio join Nazione on nome = nazione
+where anno < 2000
+group by persona, continente
+
+
+
+—— Query 7
+—— Pr tutti i continenti tranne l’Oceania, calcolare il numero medio annuo di viaggi 
+—— effettuati in quel continente
+—— GROUP BY CON AVERAGE
+
+select continente, count(*)/count(distinct anno) as numeroMedioAnnuo
+from Viaggio join Nazione on nome = nazione
+where continente <> 'Oceania'
+group by continente
+
+
+
+—— Query 8
+—- Calcolare le persone che non hanno mai effettuato un viaggio nella nazione in cui sono nate.
+—— NEGAZIONE
+
+select CF
+from Persona
+where nazioneNascita not in (select nazione  
+                             from Viaggio
+                             where persona = CF)
+
+
+
+—— Query 9 
+-- calcolare le persone che hanno visitato tutte le nazioni dell'Oceania
+—— QUANTIFICATORE UNIVERSALE
+
+select CF
+from Persona P 
+where not exists (select nome 
+                  from Nazione
+                  where continente = 'Oceania' and 
+                        nome not in (select nazione from Viaggio where persona = P.CF)) 
+
+
+
+—— Query 10 
+-- calcolare le persone che hanno visitato tutte le nazioni di almeno un continente
+—— QUANTFICATORE ESISTENZIALE E UNIVERSALE
+
+select CF
+from Persona P
+where exists (select continente 
+	      from Nazione N
+              where not exists (select nome 
+                                from Nazione 
+                                where continente = N.continente and 
+                                      nome not in (select nazione 
+                                                   from Viaggio 
+                                                   where persona = P.CF)
+            		         )
+	      )

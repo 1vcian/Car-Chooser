@@ -1,0 +1,39 @@
+1)
+select persona.nome, citta.regione
+from persona,citta
+where persona.eta >= 18 and citta.nome = persona.cittanascita
+
+2)
+select g1.genitore, g1.figlio
+from persona as p1, persona as p2, genia as g1
+where p1.nome = g1.genitore and p2.nome = g1.figlio and p1.cittanascita = p2.cittanascita
+
+3)
+select distinct c1.regione
+from persona as p1, genia as g1, citta as c1 
+where p1.nome = g1.genitore and p1.eta > 50 and p1.cittanascita = c1.nome
+
+4)
+select distinct g2.genitore as nonno
+from genia as g1, genia as g2, persona as p1
+where g1.genitore = g2.figlio and g2.genitore = p1.nome and p1.sesso = 'M'
+
+5)
+select p1.nome, p1.reddito, p1.eta, p1.sesso, p1.cittanascita, p2.nome as nonno
+from persona as p1 left join genia as g1 on p1.nome = g1.genitore left join genia as g2 on g1.genitore = g2.figlio left join persona as p2 on g2.genitore = p2.nome 
+where p2.sesso = 'M' 
+
+6)
+select distinct c1.regione
+from persona p1, genia g1, genia g2, citta c1
+where g1.genitore = g2.figlio and p1.nome = g2.genitore and p1.eta < 60 and p1.cittanascita = c1.nome and p1.sesso = 'M'
+
+7)
+select distinct g1.figlio as fratello, g2.figlio as fratello
+from genia as g1, genia as g2, genia as g3, genia as g4
+where g1.figlio > g2.figlio and g1.figlio = g3.figlio and g2.figlio = g4.figlio and g2.genitore != g3.genitore and g1.genitore = g2.genitore and g3.genitore = g4.genitore 
+
+8)
+select p1.nome, p1.reddito, p1.eta, p1.sesso, p1.cittanascita, g2.genitore, g4.genitore
+from persona p1, genia g1, genia g2, genia g3, genia g4, persona p2
+where p1.nome = g1.figlio and g1.genitore = p2.nome and p2.sesso = 'M' and g1.genitore = g2.figlio and g2.figlio = g3.genitore and g3.genitore = g4.figlio and g2.genitore > g4.genitore'

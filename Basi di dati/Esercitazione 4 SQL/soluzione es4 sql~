@@ -1,0 +1,3 @@
+delete from progetto
+where progetto.codice not in (select lavoratore.inprogetto
+							 from lavoratore)
