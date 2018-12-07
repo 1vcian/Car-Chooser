@@ -2,7 +2,7 @@
 var tipoMacchine,tipo,carburante,posti,spesa,nome;
 var scelta='';
 
-function ret(){/*
+function ret(){
 	if (document.chooser.type.value == 'Type'){
 		window.alert('Inserire tipo');
 		return false;
@@ -14,7 +14,7 @@ function ret(){/*
 	if (document.chooser.fuel.value == 'Fuel'){
 		window.alert('Inserire carburante');
 		return false;
-	}*/
+	}
 	tipo=document.getElementById('tipo').value;
 	carburante=document.getElementById('carburante').value;
 	posti= document.getElementById('posti').value;
@@ -60,7 +60,16 @@ function ret(){/*
 		document.getElementById('sfo').style.animation='animate '+speed+'s linear infinite';
 		document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
 		document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
-		document.getElementById('testo').innerHTML=tipoMacchine[scelta].nome;
+		document.getElementById('text').innerHTML="Car choice for you is:";
+		document.getElementById("marca_l").innerHTML= "Brand: " + tipoMacchine[scelta].brands;
+		document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name;
+		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type;
+		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat;
+		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante;
+		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget;
+
+
+
 	}	else{
 
 		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
@@ -68,7 +77,8 @@ function ret(){/*
 		document.getElementById('sfo').style.animation='animate 8s linear infinite';
 		document.getElementById('macjpg').src='';	
 		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
-		document.getElementById('testo').innerHTML='';
+		document.getElementById('text').innerHTML= 'Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
+
 	}
 	
 	//window.alert(out);

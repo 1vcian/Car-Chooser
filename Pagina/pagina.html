@@ -38,7 +38,7 @@
       <!-- Begin page content -->
       <script src="./control.js" type="text/javascript"></script>
       <main role="main" class="container" name="mai">
-        <form action="" onchange="ret()" class="form-signin"  method="POST" name="chooser" >
+        <form action="" onchange="" class="form-signin"  method="POST" name="chooser" >
           <select class="custom-select custom-select-lg mb-3" length="1" id="tipo" name="type" onchange="caricaT()" >
             <option hidden>Type</option>
             <option value="city_car">City car</option>
@@ -72,12 +72,27 @@
           <span class="badge badge-warning" id="op" onmousemove="mostr()" >Budget: 10000€</span> 
           <input type="range" class="custom-range" onmousemove="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="500" ></input>
           <br><br>
-          <button class="btn btn-lg btn-danger btn-block" type="button" name = "chooseButton" onclick="play()">Gioca!</button> 
+          <button class="btn btn-lg btn-danger btn-block" type="button" name = "chooseButton" onclick="ret()">Gioca!</button> 
         </form>
       </main>
       <img src="../immagini/car.gif" class="car" id="mac">
-      <img  id="macjpg" class="foto">
-      <div class="container"><p id="testo"></p></div>
     </div>
+    
+    
+    <div class="scritta" >
+      
+      <p  id="testo" >
+      <img  id="macjpg" class="foto">
+      <h2><text name="text" id="text"></text></h2>
+      <text id="marca_l"></text><br>
+      <text id="nome_l"></text><br>
+      <text id="tipo_l"></text><br>
+      <text id="posti_l"></text><br>
+      <text id="carburante_l"></text><br>
+      <text id="prezzo_l"></text><br>
+      
+    </p>
+      </div>
+   
   </body> 
 </html>
