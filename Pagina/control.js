@@ -57,11 +57,18 @@ function ret(){
 		document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
 		var speed=6-(tofl(tipoMacchine[scelta].budget))/100000;
 		document.getElementById('sfo').style.animation='animate '+speed+'s linear infinite';
+		document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
+		document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
+		document.getElementById('testo').innerHTML=tipoMacchine[scelta].nome;
 	}	
 	else{
 		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
 		document.getElementById('mac').src='../immagini/rz.gif';
 		document.getElementById('sfo').style.animation='animate 0.8s linear infinite';
+		document.getElementById('macjpg').src='';	
+		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
+		document.getElementById('testo').innerHTML='';
+		
 	}
 	window.alert(out);
 	scelta='';
