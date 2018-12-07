@@ -61,23 +61,31 @@ function ret(){
 		document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
 		document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
 		document.getElementById('text').innerHTML="Car choice for you is:";
-		document.getElementById("marca_l").innerHTML= "Brand: " + tipoMacchine[scelta].brands;
-		document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name;
-		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type;
-		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat;
-		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante;
-		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget;
+		document.getElementById("marca_l").innerHTML= "Brand: " + tipoMacchine[scelta].brands +"<br>";
+		document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name + "<br>";
+		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
+		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
+		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
+		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "<br>" + "<br>";
+		showbutton();
 
 
 
-	}	else{
-
+	}
+	else{
 		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
 		document.getElementById('mac').src='../immagini/car.gif';
 		document.getElementById('sfo').style.animation='animate 8s linear infinite';
 		document.getElementById('macjpg').src='';	
 		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
 		document.getElementById('text').innerHTML= 'Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
+		document.getElementById("marca_l").innerHTML= "";
+		document.getElementById("nome_l").innerHTML= "";
+		document.getElementById("tipo_l").innerHTML= "";
+		document.getElementById("posti_l").innerHTML= "";
+		document.getElementById("carburante_l").innerHTML= "";
+		document.getElementById("prezzo_l").innerHTML= "";
+		showbutton();
 
 	}
 	
@@ -167,4 +175,9 @@ function tofl(a){
 
 function correggiCarburante(c){
 	return c.replace('/','_');
+}
+function showbutton(){
+	document.getElementById('play_button').style.visibility = "visible";
+	document.getElementById('play_button').disabled=false;
+
 }
