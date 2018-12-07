@@ -1,7 +1,8 @@
 
 var tipoMacchine,tipo,carburante,posti,spesa,nome;
+var scelta='';
 
-function ret(){
+function ret(){/*
 	if (document.chooser.type.value == 'Type'){
 		window.alert('Inserire tipo');
 		return false;
@@ -13,7 +14,7 @@ function ret(){
 	if (document.chooser.fuel.value == 'Fuel'){
 		window.alert('Inserire carburante');
 		return false;
-	}
+	}*/
 	tipo=document.getElementById('tipo').value;
 	carburante=document.getElementById('carburante').value;
 	posti= document.getElementById('posti').value;
@@ -25,7 +26,7 @@ function ret(){
 		//	window.alert(toint(spesa));
 	//}
 
-	var scelta='';
+	
 	var costosa=0;
 	var diff=9999999999;
 	var lunghezza=(tipoMacchine.length -1);
@@ -60,8 +61,24 @@ function ret(){
 		document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
 		document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
 		document.getElementById('testo').innerHTML=tipoMacchine[scelta].nome;
-	}	
-	else{
+	}	else{
+
+		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
+		document.getElementById('mac').src='../immagini/car.gif';
+		document.getElementById('sfo').style.animation='animate 8s linear infinite';
+		document.getElementById('macjpg').src='';	
+		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
+		document.getElementById('testo').innerHTML='';
+	}
+	
+	//window.alert(out);
+	scelta='';
+	costosa=0;
+	diff=9999999999;
+} 
+function play(){
+
+	if (scelta==''){
 		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
 		document.getElementById('mac').src='../immagini/rz.gif';
 		document.getElementById('sfo').style.animation='animate 0.8s linear infinite';
@@ -70,12 +87,7 @@ function ret(){
 		document.getElementById('testo').innerHTML='';
 		
 	}
-	window.alert(out);
-	scelta='';
-	costosa=0;
-	diff=9999999999;
-} 
-
+}
 
 function caricaT(){
 	//muovendo il mouse aggiorno la variabile globale tipo se questo è stato giàwindow.alert('forsecarico'); modificato e carico il database di quel tipo
