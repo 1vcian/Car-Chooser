@@ -153,8 +153,53 @@ function caricaT(){
 			}
 		}
 	}	
-
 }
+function caricaGalleria(e){
+	//muovendo il mouse aggiorno la variabile globale tipo se questo è stato giàwindow.alert('forsecarico'); modificato e carico il database di quel tipo
+	if (document.gallery_form.type_gallery.value!='Type'){
+		var link;
+		switch (document.gallery_form.type_gallery.value){
+			case 'cabrio':
+				link='https://api.myjson.com/bins/j38p2';
+				break;
+			case 'city_car':
+				link='https://api.myjson.com/bins/hyina';
+				break;
+			case 'coupe':
+				link='https://api.myjson.com/bins/6na5i';
+				break;
+			case 'sedan':
+				link='https://api.myjson.com/bins/j5duu';
+				break;
+			case 'station_wagon':
+				link='https://api.myjson.com/bins/17k5nq';
+				break;
+			case 'suv':
+				link='https://api.myjson.com/bins/edx0m';
+				break;
+			case 'van':
+				link='https://api.myjson.com/bins/1fasiu';
+				break;
+		}
+		var carica=new XMLHttpRequest();
+		carica.open('GET',link ,true);
+		carica.send(null);
+		carica.onreadystatechange= function(){
+			if (carica.readyState === 4 && carica.status === 200){
+				var elem=JSON.parse(carica.responseText);
+			}
+			var lista="";
+			var i;
+			while (elem.length > 0){
+				lista += elem.pop().name + "<br>";
+			}
+			document.getElementById("car_foto").innerHTML = lista;
+			
+		}
+	}
+}	
+
+
 
 function mostr(){
 	if (document.getElementById('range_weight').value=='200000'){
@@ -179,5 +224,4 @@ function correggiCarburante(c){
 function showbutton(){
 	document.getElementById('play_button').style.visibility = "visible";
 	document.getElementById('play_button').disabled=false;
-
 }

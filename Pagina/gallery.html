@@ -39,17 +39,30 @@
           </ul>
         </div>
       </nav>
-    </header>
-    <div class="bg">
-    <!-- Begin page content -->
-    <main role="main" class="container">
-      
-   
-    </main>
-
     
+    </header>
+    
+    <div class="bg" id="galleria">
+      <!-- Begin page content -->
+      <script src="./control.js" type="text/javascript"></script>
+      <main role="main" class="container">
+        <form action="" onchange="" class="form-signin" method="POST" name="gallery_form">
+          <img  id="macjpg" class="foto">
+            <select class="custom-select custom-select-lg mb-3" length="1" id="tipo" name="type_gallery" onchange="caricaGalleria()">
+                <option hidden>Type</option>
+                <option value="city_car">City car</option>
+                <option value="sedan">Sedan</option>
+                <option value="cabrio">Cabrio</option>
+                <option value="coupe">Coupè</option>
+                <option value="station_wagon">Station Wagon</option>
+                <option value="van">Van</option>
+                <option value="suv">Suv</option>
+              </select>
+              <text id="car_foto"></text>
+            
+        </form>
 
-   
-  </div>
+      </main>
+    </div>
   </body> 
 </html>
