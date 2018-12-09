@@ -105,6 +105,19 @@ function play(){
 		document.getElementById('testo').innerHTML='';
 		
 	}
+	document.addEventListener('keydown', function(event) {
+		if(event.keyCode == 38) {
+			//freccia sopra
+			document.getElementById('mac').style.animation='sali 0.8s';
+			document.getElementById('mac').style.bottom='5%';
+		}
+		else if(event.keyCode == 40) {
+			//freccia sotto
+			document.getElementById('mac').style.animation='scendi 0.8s';
+			
+			document.getElementById('mac').style.bottom='0%';
+		}
+	});
 }
 
 function caricaT(){

@@ -26,7 +26,7 @@ body {
   position:absolute;
 }.car{
   position: fixed;
-  bottom:0;
+  bottom:0%;
   right: 70%;
   width:200px;
   height: auto;
@@ -70,6 +70,24 @@ body {
   to {
     background-position: 49.5% 0;
   }
+}
+@keyframes sali{
+from{
+  bottom:0%;
+}
+to{
+  bottom:5%;
+}
+
+}
+@keyframes scendi{
+  from{
+    bottom:5%;
+  }
+  to{
+    bottom:0%;
+  }
+
 }
 
 /* Custom page CSS
