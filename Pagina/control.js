@@ -67,7 +67,7 @@ function ret(){
 		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
 		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
 		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
-		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "<br>" + "<br>";
+		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 		
 
 
