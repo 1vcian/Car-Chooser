@@ -50,27 +50,17 @@
             <option value="suv">Suv</option>
           </select>
           
-          <select class="custom-select custom-select-lg mb-3" id="posti" name="seat">
+          <select class="custom-select custom-select-lg mb-3" id="posti" name="seat" disabled oninput="selectCarburante()" >
             <option hidden>Seat</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
           </select>
 
-          <select class="custom-select custom-select-lg mb-3" id="carburante" name="fuel">
+          <select class="custom-select custom-select-lg mb-3" id="carburante" disabled name="fuel">
             <option hidden>Fuel</option>
-            <option value="petrol">Petrol</option>
-            <option value="diesel">Diesel</option>
-            <option value="petrol_gpl">Petrol/gpl</option>
-            <option value="petrol_methane">Petrol/methane</option>
-            <option value="hybrid">Hybrid</option>
-            <option value="electric">Electric</option>
+            
           </select>
           
-          <span class="badge badge-warning" id="op" onmousemove="mostr()" >Budget: 10000€</span> 
-          <input type="range" class="custom-range" onmousemove="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="500" ></input>
+          <span class="badge badge-warning" id="op"  >Budget: 10000€</span> 
+          <input type="range" class="custom-range" oninput="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="500" ></input>
           <br><br>
           <button class="btn btn-lg btn-danger btn-block" type="button" name = "chooseButton" onclick="ret()">Send</button> 
         </form>
@@ -79,7 +69,7 @@
     </div>
     
     
-    <div class="scritta" >
+    <div class="scritta" id="scrittaid" >
       <p  id="testo" >
         <img  id="macjpg" class="foto">
         <h2><text name="text" id="text"></text></h2>
@@ -89,8 +79,7 @@
         <text id="posti_l"></text>
         <text id="carburante_l"></text>
         <text id="prezzo_l"></text>
-        <button class="btn btn-lg btn-danger" type="button" name = "play_button" id="play_button" onclick="play()" DISABLED STYLE = "visibility:hidden">Gioca</button> 
-
+      
       </p>
     </div>
   </body> 

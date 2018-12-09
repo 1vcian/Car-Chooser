@@ -33,7 +33,7 @@ function ret(){
 	//scelta della macchina ideale
 
 	for (var i=0;i<=lunghezza;i++){
-		if(parseInt(posti)==toint(tipoMacchine[i].seat) && (carburante==correggiCarburante(tipoMacchine[i].fuel_type1) || carburante==correggiCarburante(tipoMacchine[i].fuel_type2) || carburante==correggiCarburante(tipoMacchine[i].fuel_type1))){
+		if(parseInt(posti)==toint(tipoMacchine[i].seat) && (carburante==correggiCarburante(tipoMacchine[i].fuel_type1) || carburante==correggiCarburante(tipoMacchine[i].fuel_type2) || carburante==correggiCarburante(tipoMacchine[i].fuel_type3))){
 			//caso budget illimitato
 			if (spesa==200000){
 				if(toint(tipoMacchine[i].budget)>=costosa){
@@ -53,6 +53,7 @@ function ret(){
 
 	var out;
 	if (scelta!=''){
+		document.getElementById('scrittaid').style.display='block';
 		nome=tipoMacchine[scelta].name.toLowerCase();
 		out='La macchina che più si avvicina alle tue esigenze è la '+tipoMacchine[scelta].name+' che costa '+tipoMacchine[scelta].budget;
 		document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
@@ -67,15 +68,16 @@ function ret(){
 		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
 		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
 		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "<br>" + "<br>";
-		showbutton();
+		
 
 
 
 	}
 	else{
-		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
-		document.getElementById('mac').src='../immagini/car.gif';
-		document.getElementById('sfo').style.animation='animate 8s linear infinite';
+		document.getElementById('scrittaid').style.display='block';
+		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri a causa del database libitato che puoi sfogliare nella Gallery ma puoi sempre optare per un razzo! ';
+		document.getElementById('mac').src='../immagini/rz.gif';
+		document.getElementById('sfo').style.animation='animate 0.5s linear infinite';
 		document.getElementById('macjpg').src='';	
 		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
 		document.getElementById('text').innerHTML= 'Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
@@ -85,41 +87,30 @@ function ret(){
 		document.getElementById("posti_l").innerHTML= "";
 		document.getElementById("carburante_l").innerHTML= "";
 		document.getElementById("prezzo_l").innerHTML= "";
-		showbutton();
 
 	}
+	
 	
 	//window.alert(out);
 	scelta='';
 	costosa=0;
 	diff=9999999999;
 } 
-function play(){
 
-	if (scelta==''){
-		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
-		document.getElementById('mac').src='../immagini/rz.gif';
-		document.getElementById('sfo').style.animation='animate 0.8s linear infinite';
-		document.getElementById('macjpg').src='';	
-		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
-		document.getElementById('testo').innerHTML='';
-		
+document.addEventListener('keydown', function(event) {
+
+	if(event.keyCode == 38) {
+		//freccia sopra
+		document.getElementById('mac').style.animation='sali 0.8s';
+		document.getElementById('mac').style.bottom='5%';
 	}
-	document.addEventListener('keydown', function(event) {
-		if(event.keyCode == 38) {
-			//freccia sopra
-			document.getElementById('mac').style.animation='sali 0.8s';
-			document.getElementById('mac').style.bottom='5%';
-		}
-		else if(event.keyCode == 40) {
-			//freccia sotto
-			document.getElementById('mac').style.animation='scendi 0.8s';
-			
-			document.getElementById('mac').style.bottom='0%';
-		}
-	});
-}
-
+	else if(event.keyCode == 40) {
+		//freccia sotto
+		document.getElementById('mac').style.animation='scendi 0.8s';
+		
+		document.getElementById('mac').style.bottom='0%';
+	}
+});
 function caricaT(){
 	//muovendo il mouse aggiorno la variabile globale tipo se questo è stato giàwindow.alert('forsecarico'); modificato e carico il database di quel tipo
 	if (document.chooser.type.value!='Type'){
@@ -157,6 +148,7 @@ function caricaT(){
 				link='https://api.myjson.com/bins/1fasiu';
 				break;
 		}
+		selectPosti();
 		var carica=new XMLHttpRequest();
 		carica.open('GET',link,true);
 		carica.send(null);
@@ -215,6 +207,7 @@ function caricaGalleria(e){
 
 
 function mostr(){
+	
 	if (document.getElementById('range_weight').value=='200000'){
 		document.getElementById('op').innerHTML='Budget: 200000\u20AC+';
 	}
@@ -237,4 +230,127 @@ function correggiCarburante(c){
 function showbutton(){
 	document.getElementById('play_button').style.visibility = "visible";
 	document.getElementById('play_button').disabled=false;
+}
+function selectPosti(){
+
+	//controllare per ogni tipo del database quanti posti sono possibili e andare di if else
+	/*
+	<option value="2">2</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="8">8</option>*/
+//questo if modifica le select solo per la coupe
+	document.getElementById('posti').disabled=false;
+		if (document.getElementById('tipo').value=='coupe'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option><option value="5">5</option>';
+			
+		}
+		else if (document.getElementById('tipo').value=='cabrio'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option>';
+		}
+		else if (document.getElementById('tipo').value=='sedan'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="4">4</option> <option value="5">5</option>';
+		}
+		else if (document.getElementById('tipo').value=='station_wagon'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="5">5</option>';
+		}
+		else if (document.getElementById('tipo').value=='city_car'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option><option value="5">5</option>';
+		}
+		else if (document.getElementById('tipo').value=='suv'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="4">4</option><option value="5">5</option> <option value="7">7</option>';
+		}
+		else if (document.getElementById('tipo').value=='van'){
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="5">5</option> <option value="7">7</option><option value="8">8</option>';
+		}
+		/*
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> <option value="hybrid">Hybrid</option><option value="electric">Electric</option>';
+		}
+			*/
+}
+function selectCarburante(){
+	document.getElementById('carburante').disabled=false;
+	if (document.getElementById('tipo').value=='coupe'){
+		if (document.getElementById('posti').value=='2'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option>';
+		}
+		if (document.getElementById('posti').value=='4'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
+		}
+
+    
+	}
+	else if (document.getElementById('tipo').value=='cabrio'){
+		if (document.getElementById('posti').value=='2'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> ';
+		}
+		if (document.getElementById('posti').value=='4'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
+		}
+
+	}
+	else if (document.getElementById('tipo').value=='sedan'){
+		if (document.getElementById('posti').value=='4'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="hybrid">Hybrid</option><option value="electric">Electric</option>';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> <option value="hybrid">Hybrid</option><option value="electric">Electric</option>';
+		}
+
+	}
+	else if (document.getElementById('tipo').value=='station_wagon'){
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
+		}
+
+	}
+	else if (document.getElementById('tipo').value=='city_car'){
+		if (document.getElementById('posti').value=='2'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="hybrid">Hybrid</option>';
+		}
+		if (document.getElementById('posti').value=='4'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> <option value="electric">Electric</option>';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option> <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> ';
+		}
+	}	
+	else if (document.getElementById('tipo').value=='suv'){
+		if (document.getElementById('posti').value=='4'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  ';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="hybrid">Hybrid</option>';
+		}
+		if (document.getElementById('posti').value=='7'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
+		}
+
+	}
+	else if (document.getElementById('tipo').value=='van'){
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> <option value="hybrid">Hybrid</option>';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="petrol_methane">Petrol/methane</option> <option value="electric">Electric</option>';
+		}
+		if (document.getElementById('posti').value=='5'){
+			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="diesel">Diesel</option>';
+		}
+
+	}
+
+
+
+
+
+
+
+
+	
 }
