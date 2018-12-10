@@ -55,8 +55,6 @@ body {
   text-align: left;
   font-size: 23px;
   font-weight: italic;
-  
-
   color: #ff0000;
   border: 3px solid #FCD40A;
   padding: 15px;
@@ -78,6 +76,31 @@ body {
 }.container{
   text-align: center;
   padding: 10px 20px;
+}.scritta2{
+  position: fixed;
+  top:9%;
+  right: 6.5%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-size: 23px;
+  font-weight: italic;
+  color: #ff0000;
+  border: 3px solid #FCD40A;
+  padding: 15px;
+  margin: 20px;
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: default;
+  border-radius: 24px;
+  text-shadow: 0px 0px 3px #262305;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
