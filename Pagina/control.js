@@ -243,8 +243,7 @@ function selectPosti(){
 //questo if modifica le select solo per la coupe
 	document.getElementById('posti').disabled=false;
 		if (document.getElementById('tipo').value=='coupe'){
-			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option><option value="5">5</option>';
-			
+			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option><option value="5">5</option>';	
 		}
 		else if (document.getElementById('tipo').value=='cabrio'){
 			document.getElementById('posti').innerHTML='<option hidden>Seat</option><option value="2">2</option> <option value="4">4</option>';
@@ -283,7 +282,6 @@ function selectCarburante(){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
 		}
 
-    
 	}
 	else if (document.getElementById('tipo').value=='cabrio'){
 		if (document.getElementById('posti').value=='2'){
@@ -292,7 +290,6 @@ function selectCarburante(){
 		if (document.getElementById('posti').value=='4'){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
 		}
-
 	}
 	else if (document.getElementById('tipo').value=='sedan'){
 		if (document.getElementById('posti').value=='4'){
@@ -301,13 +298,11 @@ function selectCarburante(){
 		if (document.getElementById('posti').value=='5'){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option>  <option value="petrol_gpl">Petrol/gpl</option> <option value="petrol_methane">Petrol/methane</option> <option value="hybrid">Hybrid</option><option value="electric">Electric</option>';
 		}
-
 	}
 	else if (document.getElementById('tipo').value=='station_wagon'){
 		if (document.getElementById('posti').value=='5'){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
 		}
-
 	}
 	else if (document.getElementById('tipo').value=='city_car'){
 		if (document.getElementById('posti').value=='2'){
@@ -330,7 +325,6 @@ function selectCarburante(){
 		if (document.getElementById('posti').value=='7'){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="petrol">Petrol</option><option value="diesel">Diesel</option> <option value="hybrid">Hybrid</option>';
 		}
-
 	}
 	else if (document.getElementById('tipo').value=='van'){
 		if (document.getElementById('posti').value=='5'){
@@ -342,7 +336,6 @@ function selectCarburante(){
 		if (document.getElementById('posti').value=='5'){
 			document.getElementById('carburante').innerHTML='<option hidden>Fuel</option><option value="diesel">Diesel</option>';
 		}
-
 	}
 
 
