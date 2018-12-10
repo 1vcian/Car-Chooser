@@ -101,6 +101,95 @@ body {
   border-radius: 24px;
   text-shadow: 0px 0px 3px #262305;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.developers {
+  position: fixed;
+  top:23%;
+  left: 0%;
+  text-align: center;
+  font-size: 60px;
+  font-weight: italic;
+  color: #ff0000;
+  border: 3px solid #FCD40A;
+  padding: 22px;
+  margin: 20px;
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: default;
+  border-radius: 24px;
+  text-shadow: 0px 0px 3px #262305;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.fotoProfilo1{
+  position: fixed;
+  top:10%;
+  right: 38%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8%;
+  border: 3px solid #FCD40A;
+  background-color: rgb(255, 253, 134);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.fotoProfilo2{
+  position: fixed;
+  top:10%;
+  right: 8%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8%;
+  border: 3px solid #FCD40A;
+  background-color: rgb(255, 253, 134);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.scrittaProfilo1{
+  position: fixed;
+  top:55%;
+  right: 39.2%;
+  text-align: center;
+  font-size: 27px;
+  font-weight: italic;
+  color: #ff0000;
+  border: 3px solid #FCD40A;
+  padding: 15px;
+  margin: 20px;
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: default;
+  border-radius: 24px;
+  text-shadow: 0px 0px 3px #262305;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.scrittaProfilo2{
+  position: fixed;
+  top:55%;
+  right: 8.7%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: italic;
+  color: #ff0000;
+  border: 3px solid #FCD40A;
+  padding: 15px;
+  margin: 20px;
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  cursor: default;
+  border-radius: 24px;
+  text-shadow: 0px 0px 3px #262305;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
