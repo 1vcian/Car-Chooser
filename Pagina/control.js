@@ -333,7 +333,7 @@ function visualizzaGalleria(){
 	document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name + "<br>";
 	document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
 	document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
-	document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
+	document.getElementById("carburante_l").innerHTML= "Fuel:<br> " + tipoMacchine[scelta].fuel_type1 +"<br>"+ tipoMacchine[scelta].fuel_type2 +"<br>" +tipoMacchine[scelta].fuel_type3  + "<br>";
 	document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 	
 
