@@ -167,7 +167,7 @@ function caricaGalleria(){
 		if (posti==toint(tipoMacchine[i].seat)){
 
 
-			document.getElementById('macchina').innerHTML+='<option value='+i+'>'+tipoMacchine[i].name+'</option>';
+			document.getElementById('macchina').innerHTML+='<option value='+i+'>'+tipoMacchine[i].brands.charAt(0).toUpperCase()+tipoMacchine[i].brands.substr(1).toLowerCase()+' '+tipoMacchine[i].name+'</option>';
 		}
 	}
 		
