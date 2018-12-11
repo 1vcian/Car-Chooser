@@ -4,15 +4,15 @@ var scelta='';
 
 function ret(){
 	if (document.chooser.type.value == 'Type'){
-		window.alert('Inserire tipo');
+		window.alert('Insert type!');
 		return false;
 	}
 	if (document.chooser.seat.value == 'Seat'){
-		window.alert('Inserire posti');
+		window.alert('Insert seats!');
 		return false;
 	}
 	if (document.chooser.fuel.value == 'Fuel'){
-		window.alert('Inserire carburante');
+		window.alert('Insert fuel!');
 		return false;
 	}
 	tipo=document.getElementById('tipo').value;
@@ -55,13 +55,12 @@ function ret(){
 	if (scelta!=''){
 		document.getElementById('scrittaid').style.display='block';
 		nome=tipoMacchine[scelta].name.toLowerCase();
-		out='La macchina che più si avvicina alle tue esigenze è la '+tipoMacchine[scelta].name+' che costa '+tipoMacchine[scelta].budget;
 		document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
 		var speed=6-(tofl(tipoMacchine[scelta].budget))/100000;
 		document.getElementById('sfo').style.animation='animate '+speed+'s linear infinite';
 		document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
 		document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
-		document.getElementById('text').innerHTML="Car choice for you is:";
+		document.getElementById('text').innerHTML="Car choosed for you is:";
 		document.getElementById("marca_l").innerHTML= "Brand: " + tipoMacchine[scelta].brands +"<br>";
 		document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name + "<br>";
 		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
@@ -75,12 +74,11 @@ function ret(){
 	}
 	else{
 		document.getElementById('scrittaid').style.display='block';
-		out='Non è stata trovata alcuna macchina che rispetti i tuoi parametri a causa del database libitato che puoi sfogliare nella Gallery ma puoi sempre optare per un razzo! ';
-		document.getElementById('mac').src='../immagini/rz.gif';
+			document.getElementById('mac').src='../immagini/rz.gif';
 		document.getElementById('sfo').style.animation='animate 0.5s linear infinite';
 		document.getElementById('macjpg').src='';	
 		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
-		document.getElementById('text').innerHTML= 'Non è stata trovata alcuna macchina che rispetti i tuoi parametri, sfoglia la Gallery per avere un´idea del nostro Database';
+		document.getElementById('text').innerHTML= 'We are sorry but we have not found any car like this for your budget, take a look at our gallery to see all cars in our Database!';
 		document.getElementById("marca_l").innerHTML= "";
 		document.getElementById("nome_l").innerHTML= "";
 		document.getElementById("tipo_l").innerHTML= "";
@@ -159,51 +157,26 @@ function caricaT(){
 		}
 	}	
 }
-function caricaGalleria(e){
-	//muovendo il mouse aggiorno la variabile globale tipo se questo è stato giàwindow.alert('forsecarico'); modificato e carico il database di quel tipo
-	if (document.gallery_form.type_gallery.value!='Type'){
-		var link;
-		switch (document.gallery_form.type_gallery.value){
-			case 'cabrio':
-				link='https://api.myjson.com/bins/j38p2';
-				break;
-			case 'city_car':
-				link='https://api.myjson.com/bins/hyina';
-				break;
-			case 'coupe':
-				link='https://api.myjson.com/bins/6na5i';
-				break;
-			case 'sedan':
-				link='https://api.myjson.com/bins/j5duu';
-				break;
-			case 'station_wagon':
-				link='https://api.myjson.com/bins/17k5nq';
-				break;
-			case 'suv':
-				link='https://api.myjson.com/bins/edx0m';
-				break;
-			case 'van':
-				link='https://api.myjson.com/bins/1fasiu';
-				break;
-		}
-		var carica=new XMLHttpRequest();
-		carica.open('GET',link ,true);
-		carica.send(null);
-		carica.onreadystatechange= function(){
-			if (carica.readyState === 4 && carica.status === 200){
-				var elem=JSON.parse(carica.responseText);
-			}
-			var lista="";
-			var i;
-			while (elem.length > 0){
-				lista += elem.pop().name + "<br>";
-			}
-			document.getElementById("car_foto").innerHTML = lista;
-			
+
+function caricaGalleria(){
+	posti=parseInt(document.getElementById('posti').value);
+	document.getElementById('macchina').hidden=false;
+		for (var i=0;i<tipoMacchine.length -1;i++){
+
+
+		if (posti==toint(tipoMacchine[i].seat)){
+
+
+			document.getElementById('macchina').innerHTML+='<option value='+i+'>'+tipoMacchine[i].name+'</option>';
 		}
 	}
+		
+	
 }	
+function resetLista(){
+	document.getElementById('macchina').innerHTML='';
 
+}
 
 
 function mostr(){
@@ -346,4 +319,22 @@ function selectCarburante(){
 
 
 	
+}
+function visualizzaGalleria(){
+	scelta=document.getElementById('macchina').value;
+	document.getElementById('scrittaid').style.display='block';
+	nome=tipoMacchine[scelta].name.toLowerCase();
+	document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
+	var speed=6-(tofl(tipoMacchine[scelta].budget))/100000;
+	document.getElementById('sfo').style.animation='animate '+speed+'s linear infinite';
+	document.getElementById('macjpg').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.jpg';	
+	document.getElementById('macjpg').style.border=' 3px solid #ffdd00';
+	document.getElementById("marca_l").innerHTML= "Brand: " + tipoMacchine[scelta].brands +"<br>";
+	document.getElementById("nome_l").innerHTML= "Name: " + tipoMacchine[scelta].name + "<br>";
+	document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
+	document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
+	document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
+	document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
+	
+
 }

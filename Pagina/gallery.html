@@ -17,6 +17,7 @@
   </head>
   
   <body>
+      
     <header>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -26,36 +27,61 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a class="nav-link" href="pagina.html">Car Chooser</a></li>
-            <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item active"><a class="nav-link" href="contacts.html">Contacts</a></li>
+            <li class="nav-item active">
+              <a class="nav-link" href="pagina.html">Car Chooser</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="contacts.html">Contacts</a>
+            </li>
           </ul>
         </div>
       </nav>
     
     </header>
     
-    <div class="bg" id="galleria">
+    <div class="bg" id="sfo">
       <!-- Begin page content -->
       <script src="./control.js" type="text/javascript"></script>
       <main role="main" class="container">
-        <form action="" onchange="" class="form-signin" method="POST" name="gallery_form">
-          <img  id="macjpg" class="foto">
-            <select class="custom-select custom-select-lg mb-3" length="1" id="tipo" name="type_gallery" onchange="caricaGalleria()">
-                <option hidden>Type</option>
-                <option value="city_car">City car</option>
-                <option value="sedan">Sedan</option>
-                <option value="cabrio">Cabrio</option>
-                <option value="coupe">Coupè</option>
-                <option value="station_wagon">Station Wagon</option>
-                <option value="van">Van</option>
-                <option value="suv">Suv</option>
-              </select>
-              <text id="car_foto" id="mac"></text>
+        <form action="" onchange="" class="form-signin"  method="POST" name="chooser" >
+          <select class="custom-select custom-select-lg mb-3" length="1" id="tipo" name="type" oninput="caricaT()" onchange="resetLista()" >
+            <option hidden>Type</option>
+            <option value="city_car">City car</option>
+            <option value="sedan">Sedan</option>
+            <option value="cabrio">Cabrio</option>
+            <option value="coupe">Coupè</option>
+            <option value="station_wagon">Station Wagon</option>
+            <option value="van">Van</option>
+            <option value="suv">Suv</option>
+          </select>
+          
+          <select class="custom-select custom-select-lg mb-3" id="posti" name="seat" disabled oninput="caricaGalleria()" >
+            <option hidden>Seat</option>
+       
+          </select>
+          <select class="custom-select" hidden multiple id="macchina" oninput="visualizzaGalleria()">
             
+          
+          </select>
         </form>
-
+        <img src="../immagini/car.gif" class="car" id="mac">
       </main>
+    </div>
+    <div class="scritta" id="scrittaid" >
+      <p  id="testo" >
+        <img  id="macjpg" class="foto">
+        <h2><text name="text" id="text"></text></h2>
+        <text id="marca_l"></text>
+        <text id="nome_l"></text>
+        <text id="tipo_l"></text>
+        <text id="posti_l"></text>
+        <text id="carburante_l"></text>
+        <text id="prezzo_l"></text>
+      
+      </p>
     </div>
   </body> 
 </html>
