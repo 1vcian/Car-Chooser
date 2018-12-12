@@ -57,7 +57,7 @@ function ret(){
 		document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
 		document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
 		document.getElementById("carburante_l").innerHTML= "Fuel: " + carburante + "<br>";
-		document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
+		document.getElementById("prezzo_l").innerHTML= "Price: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 	}
 	else{
 		document.getElementById('scrittaid').style.display='block';
@@ -65,7 +65,7 @@ function ret(){
 		document.getElementById('sfo').style.animation='animate 0.5s linear infinite';
 		document.getElementById('macjpg').src='';	
 		document.getElementById('macjpg').style.border=' 0px solid #ffdd00';
-		document.getElementById('text').innerHTML= 'We are sorry but we have not found any car like this for your budget, take a look at our gallery to see all cars in our Database!';
+		document.getElementById('text').innerHTML= 'We are sorry but we have not found any car like this for your budget, take a look at our ' + '<a href="gallery.html">gallery</a>' + ' to see all cars in our Database!';
 		document.getElementById("marca_l").innerHTML= "";
 		document.getElementById("nome_l").innerHTML= "";
 		document.getElementById("tipo_l").innerHTML= "";
@@ -139,6 +139,9 @@ function caricaT(){
 	}	
 }
 function caricaGalleria(){
+	if (document.getElementById('posti')!=posti){
+		resetLista();
+	}
 	posti=parseInt(document.getElementById('posti').value);
 	document.getElementById('macchina').hidden=false;
 	for (var i=0;i<tipoMacchine.length -1;i++){
@@ -290,5 +293,5 @@ function visualizzaGalleria(){
 	document.getElementById("tipo_l").innerHTML= "Type: " + tipoMacchine[scelta].type + "<br>";
 	document.getElementById("posti_l").innerHTML= "Seats: " + tipoMacchine[scelta].seat + "<br>";
 	document.getElementById("carburante_l").innerHTML= "Fuel:<br> " + tipoMacchine[scelta].fuel_type1 +"<br>"+ tipoMacchine[scelta].fuel_type2 +"<br>" +tipoMacchine[scelta].fuel_type3  + "<br>";
-	document.getElementById("prezzo_l").innerHTML= "Budget: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
+	document.getElementById("prezzo_l").innerHTML= "Price: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 }
