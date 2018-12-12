@@ -2,9 +2,7 @@ function validaForm(){
   if (controllaPassword() == false){
       return false;
   }
-  
   return true;
-
 }
 function controllaPassword(){
     if (document.registra.inputPassword.value != document.registra.controllaPassword.value){
@@ -12,5 +10,4 @@ function controllaPassword(){
         return false;
     }
     return true;
-
 }

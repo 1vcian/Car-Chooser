@@ -6,12 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../immagini/car.gif">
-
     <title>Car Chooser</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
   </head>
@@ -26,22 +23,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="pagina.html">Car Chooser</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="contacts.html">Contacts</a>
-            </li>
+            <li class="nav-item active"><a class="nav-link" href="pagina.html">Car Chooser</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="contacts.html">Contacts</a></li>
           </ul>
         </div>
       </nav>
-    
     </header>
-    
-    
+
     <div class="bg" id="sfo">
       <!-- Begin page content -->
       <script src="./control.js" type="text/javascript"></script>
@@ -63,19 +52,16 @@
           </select>
 
           <select class="custom-select custom-select-lg mb-3" id="carburante" disabled name="fuel">
-            <option hidden>Fuel</option>
-            
+            <option hidden>Fuel</option> 
           </select>
           
           <span class="badge badge-warning" id="op"  >Budget: 10000€</span> 
-          <input type="range" class="custom-range" oninput="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="500" ></input>
-          <br><br>
+          <input type="range" class="custom-range" oninput="mostr()" name="weight" id="range_weight" value="10000" min="10000" max="200000" step="500" ></input><br><br>
           <button class="btn btn-lg btn-danger btn-block" type="button" name = "chooseButton" onclick="ret()">Send</button> 
         </form>
       </main>
       <img src="../immagini/car.gif" class="car" id="mac">
     </div>
-    
     
     <div class="scritta" id="scrittaid" >
       <p  id="testo" >
@@ -87,7 +73,6 @@
         <text id="posti_l"></text>
         <text id="carburante_l"></text>
         <text id="prezzo_l"></text>
-      
       </p>
     </div>
   </body> 

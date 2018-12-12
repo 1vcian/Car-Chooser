@@ -77,7 +77,24 @@ animation: volad 4s linear infinite;
   to {
     background-position: 49.5% 0;
   }
-}
+}@keyframes sali{
+  from{
+    bottom:0%;
+  }
+  to{
+    bottom:5%;
+  }
+  
+  }
+  @keyframes scendi{
+    from{
+      bottom:5%;
+    }
+    to{
+      bottom:0%;
+    }
+  
+  }
 
 .form-signin {
   width: 100%;

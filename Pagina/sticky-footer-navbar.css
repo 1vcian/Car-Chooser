@@ -43,8 +43,7 @@ body {
   height: auto;
   border-radius: 8%;
   background-color: rgb(255, 253, 134);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }.scritta{
   display: none;
   position: fixed;
@@ -72,16 +71,17 @@ body {
   text-shadow: 0px 0px 3px #262305;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color:rgb(255,255,0,0.3);
-
-  
 }.container{
   text-align: center;
   padding: 10px 20px;
+}.containerr{
+  text-align: center;
+  position: absolute;
+  left:0.38576%;
 }.scritta2{
   background-color:rgb(255,255,0,0.2);
   position: fixed;
   top:9%;
-  right: 6.5%;
   width: auto;
   height: auto;
   text-align: center;
@@ -96,7 +96,6 @@ body {
   font-weight: bold;
   font-variant: small-caps;
   line-height: 20px;
-  text-align: center;
   text-decoration: none;
   background-repeat: no-repeat;
   cursor: default;
@@ -128,29 +127,29 @@ body {
   text-shadow: 0px 0px 3px #262305;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }.fotoProfilo1{
-  position: fixed;
-  top:10%;
+  position: absolute;
+  top:15%;
   right: 38%;
-  width: 300px;
-  height: 300px;
+  width: 20%;
+  height: auto;
   border-radius: 8%;
   border: 3px solid #FCD40A;
   background-color: rgb(255, 253, 134);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }.fotoProfilo2{
-  position: fixed;
-  top:10%;
+  position: absolute;
+  top:15%;
   right: 8%;
-  width: 300px;
-  height: 300px;
+  width: 20%;
+  height: auto;
   border-radius: 8%;
   border: 3px solid #FCD40A;
   background-color: rgb(255, 253, 134);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }.scrittaProfilo1{
-  position: fixed;
+  position: absolute;
   top:58%;
-  right: 39.2%;
+  right: 38.2%;
   text-align: center;
   font-size: 27px;
   font-weight: italic;
@@ -175,7 +174,7 @@ body {
   background-color:rgb(255,255,0,0.5);
   position: fixed;
   top:58%;
-  right: 8.7%;
+  right: 7.7%;
   text-align: center;
   font-size: 26px;
   font-weight: italic;
@@ -197,9 +196,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-@keyframes animate
-{
+@keyframes animate{
   from{
     background-position: 0 0;
   }
@@ -208,13 +205,12 @@ body {
   }
 }
 @keyframes sali{
-from{
-  bottom:0%;
-}
-to{
-  bottom:5%;
-}
-
+  from{
+    bottom:0%;
+  }
+  to{
+    bottom:5%;
+  }
 }
 @keyframes scendi{
   from{
@@ -223,14 +219,10 @@ to{
   to{
     bottom:0%;
   }
-
 }
-
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
-
 code {
   font-size: 80%;
 }
