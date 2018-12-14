@@ -316,3 +316,12 @@ function visualizzaGalleria(){
 	document.getElementById("carburante_l").innerHTML= "Fuel:<br> " + tipoMacchine[scelta].fuel_type1 +"<br>"+ tipoMacchine[scelta].fuel_type2 +"<br>" +tipoMacchine[scelta].fuel_type3  + "<br>";
 	document.getElementById("prezzo_l").innerHTML= "Price: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 }
+//funzione per la size della scritta budget
+//ogni volta che il mouse si muove sullo sfondo, prendo la lunghezza della finestra, la divido per 42 e la setto come dimensione della fontsize
+function aggiorna(){
+	var dimensione; var bool;
+
+	dimensione=window.innerWidth/42;
+	document.getElementById('op').style.fontSize=dimensione+'px';
+	
+}
