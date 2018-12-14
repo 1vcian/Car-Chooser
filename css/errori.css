@@ -40,7 +40,6 @@ body {
   bottom: 80%;
   right: 0%;
   animation: vola 4s linear infinite;
-  animation: sinusoide 0.5s;
 }.cc{
 background-attachment: fixed;
 position:absolute;
