@@ -1,7 +1,9 @@
+//Dichiarazione delle variabili globali
 var tipoMacchine,tipo,carburante,posti,spesa,nome;
 var scelta='';
-
+//funzione di return del tasto principale
 function ret(){
+	//alert per far inserire tutti i parametri
 	if (document.chooser.type.value == 'Type'){
 		window.alert('Insert type!');
 		return false;
@@ -14,10 +16,12 @@ function ret(){
 		window.alert('Insert fuel!');
 		return false;
 	}
+	//assegnazione degli input alle corrispettive variabili globali
 	tipo=document.getElementById('tipo').value;
 	carburante=document.getElementById('carburante').value;
 	posti= document.getElementById('posti').value;
 	spesa=parseInt(document.getElementById('range_weight').value);
+	//variabili locali necessarie per l'algoritmo di scelta della macchina ideale
 	var costosa=0;
 	var diff=9999999999;
 	var lunghezza=(tipoMacchine.length -1);
@@ -41,9 +45,10 @@ function ret(){
 			}		
 		}
 	}
-
+	//output della macchina ideale su schermo nella form
 	var out;
 	if (scelta!=''){
+		//caso macchina esistente
 		document.getElementById('scrittaid').style.display='block';
 		nome=tipoMacchine[scelta].name.toLowerCase();
 		document.getElementById('mac').src='../Macchine/'+tipoMacchine[scelta].name.toLowerCase()+'.png';	
@@ -60,6 +65,7 @@ function ret(){
 		document.getElementById("prezzo_l").innerHTML= "Price: " + tipoMacchine[scelta].budget + "€" + "<br>" + "<br>";
 	}
 	else{
+		//caso macchina inesistente
 		document.getElementById('scrittaid').style.display='block';
 		document.getElementById('mac').src='../immagini/rz.gif';
 		document.getElementById('sfo').style.animation='animate 0.5s linear infinite';
@@ -73,14 +79,14 @@ function ret(){
 		document.getElementById("carburante_l").innerHTML= "";
 		document.getElementById("prezzo_l").innerHTML= "";
 	}
-	//window.alert(out);
+	//reset dei parametri di scelta per l'algoritmo
 	scelta='';
 	costosa=0;
 	diff=9999999999;
 } 
 document.addEventListener('keydown', function(event) {
 	if(event.keyCode == 38) {
-		//freccia sopra
+		//freccia sopra per muovere la macchinina come easter egg
 		document.getElementById('mac').style.animation='sali 0.8s';
 		document.getElementById('mac').style.bottom='5%';
 	}
@@ -91,17 +97,18 @@ document.addEventListener('keydown', function(event) {
 	}
 });
 function caricaT(){
-	//muovendo il mouse aggiorno la variabile globale tipo se questo è stato giàwindow.alert('forsecarico'); modificato e carico il database di quel tipo
+	//inserendo un input carica il database equivalente a quel input da uno dei link del prossimo commento
 	if (document.chooser.type.value!='Type'){
 		/*
 		link temporanei database:
-		cabrio  		https://api.myjson.com/bins/j38p2   ftt
-		city car 		https://api.myjson.com/bins/hyina   ftt
-		coupe			https://api.myjson.com/bins/6na5i   ftt
-		sedan			https://api.myjson.com/bins/j5duu   ftt
-		station wagon 	https://api.myjson.com/bins/17k5nq  ftt
+		cabrio  		https://api.myjson.com/bins/j38p2  
+		city car 		https://api.myjson.com/bins/hyina  
+		coupe			https://api.myjson.com/bins/6na5i  
+		sedan			https://api.myjson.com/bins/j5duu  
+		station wagon 	https://api.myjson.com/bins/17k5nq 
 		suv				https://api.myjson.com/bins/edx0m
 		van				https://api.myjson.com/bins/1fasiu
+		alla fine non erano così temporanei..
 		*/
 		var link;
 		switch (document.chooser.type.value){
@@ -127,7 +134,9 @@ function caricaT(){
 				link='https://api.myjson.com/bins/1fasiu';
 				break;
 		}
+		//avvio l'algoritmo ad albero dei posti in base al tipo di macchina
 		selectPosti();
+		//carico il database
 		var carica=new XMLHttpRequest();
 		carica.open('GET',link,true);
 		carica.send(null);
@@ -138,21 +147,26 @@ function caricaT(){
 		}
 	}	
 }
+//funzione che in base all'input dei posti e del tipo di macchina carica la galleria corretta
 function caricaGalleria(){
 	if (document.getElementById('posti')!=posti){
 		resetLista();
+		//per evitare che si concatenino le macchine nel caso particolare in cui venga cambiato solo il numero di posti e non il tipo di macchina
 	}
 	posti=parseInt(document.getElementById('posti').value);
 	document.getElementById('macchina').hidden=false;
 	for (var i=0;i<tipoMacchine.length -1;i++){
+		//print dentro una multiple select delle macchine con quelle caratteristiche
 		if (posti==toint(tipoMacchine[i].seat)){
 			document.getElementById('macchina').innerHTML+='<option value='+i+'>'+tipoMacchine[i].brands.charAt(0).toUpperCase()+tipoMacchine[i].brands.substr(1).toLowerCase()+' '+tipoMacchine[i].name+'</option>';
 		}
 	}
 }	
+//funzione che resetta le opzioni di una select
 function resetLista(){
 	document.getElementById('macchina').innerHTML='';
 }
+//funzione che mostra a schermo il budget in modo costantemente aggiornato
 function mostr(){
 	if (document.getElementById('range_weight').value=='200000'){
 		document.getElementById('op').innerHTML='Budget: 200000\u20AC+';
@@ -161,19 +175,24 @@ function mostr(){
 		document.getElementById('op').innerHTML='Budget: '+document.getElementById('range_weight').value+'\u20AC';
 	}
 }
+//funzione per convertire in intero i valori del database delle macchine che sono stati scritti con il punto che js interpreta come virgola
 function toint(a){
 	return parseInt(a.replace('.',''));
 }
+//stesso caso dell'int ma per i float
 function tofl(a){
 	return parseFloat(a.replace('.',''));
 }
+//correzione dei tipi di carburante perchè inseriti male nel database
 function correggiCarburante(c){
 	return c.replace('/','_');
 }
+//vedi o non vedi del bottone
 function showbutton(){
 	document.getElementById('play_button').style.visibility = "visible";
 	document.getElementById('play_button').disabled=false;
 }
+//creazione di un albero in base al tipo di macchina selezionato, cambiano il numero di posti selezionabile e in base a quello, i carburanti 
 function selectPosti(){
 	//controllare per ogni tipo del database quanti posti sono possibili e andare di if else
 	/*
@@ -279,6 +298,7 @@ function selectCarburante(){
 		}
 	}	
 }
+//output visivo della gallery
 function visualizzaGalleria(){
 	scelta=document.getElementById('macchina').value;
 	document.getElementById('scrittaid').style.display='block';
