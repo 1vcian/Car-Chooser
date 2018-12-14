@@ -1,6 +1,7 @@
 //Dichiarazione delle variabili globali
 var tipoMacchine,tipo,carburante,posti,spesa,nome;
 var scelta='';
+posti=0;
 //funzione di return del tasto principale
 function ret(){
 	//alert per far inserire tutti i parametri
